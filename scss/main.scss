@@ -1,0 +1,291 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+* {
+  // border: 0 solid red !important;
+}
+
+
+
+// variables
+
+$breakpoint--tablet: 600px;
+$breakpoint--desktop: 1024px;
+
+$light-black: #373737;
+$black: #000000;
+$dark-gold: #34322a;
+$gold: #94744e;
+$gray: #7f7f7f;
+$off-white: #f8f8f8;
+$white: #ffffff;
+
+
+
+// default styles
+
+body {
+  background: $black;
+}
+
+
+
+// classes
+
+.container {
+  background-image: url(/img/trees@2x.png);
+  background-repeat: no-repeat;
+  background-size: 1200px;
+
+  @media (min-width: $breakpoint--tablet) {
+    background-size: 1300px;
+  }
+
+  @media (min-width: $breakpoint--desktop) {
+    background-size: 1500px;
+  }
+}
+
+// headings
+.cn-c-heading {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: $gold;
+  text-transform: uppercase;
+}
+
+// nav
+.cn-c-nav {
+  padding-top: 12px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.cn-c-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  > li {
+    display: block;
+
+    @media (min-width: $breakpoint--tablet) {
+      display: inline-block;
+    }
+  }
+}
+
+.cn-c-nav__list-link {
+  display: block;
+  padding: 8px 10px;
+
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: line-through;
+  }
+}
+
+// hero
+.cn-c-hero {
+  padding: 60px 0 160px;
+
+  @media (min-width: $breakpoint--tablet) {
+    padding: 80px 0 160px;
+  }
+
+  @media (min-width: $breakpoint--desktop) {
+    padding: 100px 0 140px;
+  }
+}
+
+.cn-c-hero__logo {
+  width: 160px;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint--tablet) {
+    width: 220px;
+  }
+
+  @media (min-width: $breakpoint--desktop) {
+    width: 240px;
+  }
+}
+
+.cn-c-hero__logo-img {
+  display: block;
+  width: 100%;
+}
+
+// about our products
+.cn-c-about-our-products {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  background: $white;
+  border: 1px solid $light-black;
+}
+
+.cn-c-about-our-products__content {
+  width: 80%;
+  margin: 0 auto;
+
+  text-align: center;
+
+  @media (min-width: $breakpoint--tablet) {
+    width: 70%;
+  }
+}
+
+.cn-c-about-our-products__content-paragraph {
+  margin-top: 30px;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+// product list
+.cn-c-product-list {
+  padding: 50px 0;
+
+  text-align: center;
+}
+
+.cn-c-product-list__list {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+
+  text-align: center;
+
+  > li {
+    display: block;
+    width: 200px;
+    margin: 60px auto 0;
+
+    &:first-child {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $breakpoint--tablet) {
+      display: inline-block;
+      width: 150px;
+      margin: 0 0 0 30px;
+
+      vertical-align: top;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: $breakpoint--desktop) {
+      width: 200px;
+      margin: 0 0 0 50px;
+    }
+  }
+}
+
+.cn-c-product-list__link {
+  display: block;
+
+  text-decoration: none;
+}
+
+.cn-c-product-list__item-img {
+  display: block;
+  width: 100%;
+}
+
+.cn-c-product-list__item-id {
+  display: block;
+  margin-top: 22px;
+
+  font-family: 'Cormorant Garamond', serif;
+  color: $gray;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cn-c-product-list__item-name {
+  display: block;
+  margin-top: 4px;
+
+  font-family: 'Cormorant Garamond', serif;
+  color: $gray;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.cn-c-product-list__item-description {
+  display: block;
+  margin-top: 20px;
+
+  font-family: 'Cormorant Garamond', serif;
+  color: $gray;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cn-c-about-us {
+  padding: 60px 0 40px;
+}
+
+.cn-c-about-us__inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  border: 1px solid $dark-gold;
+}
+
+.cn-c-about-us__content {
+  width: 80%;
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: $gray;
+
+  @media (min-width: $breakpoint--tablet) {
+    width: 50%;
+  }
+}
+
+.cn-c-about-us__content-img {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0;
+}
+
+.cn-c-about-us__content-paragraph {
+  margin-top: 30px;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.4;
+
+  &.cn-has-bottom-margin {
+    margin-bottom: 30px;
+  }
+}
